@@ -1,0 +1,97 @@
+:root {
+  --primary-ochre: #8b4513;
+  --secondary-ochre: #a0522d;
+  --light-ochre: #d2b48c;
+  --cream: #faf8f5;
+  --beige: #f5f2ed;
+  --wood-light: #e8dcc0;
+  --wood-dark: #d4c4a0;
+  --text-dark: #3a2618;
+  --text-medium: #5a4638;
+  --text-light: #8a7668;
+  --accent-red: #c44d34;
+  --shadow: rgba(139, 69, 19, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif SC', serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.poetry-font {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-weight: 400;
+}
+
+.body-font {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+.heading-font {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--beige);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-ochre);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-ochre);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Animation classes */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-enter-from {
+  transform: translateX(-100%);
+}
+
+.slide-leave-to {
+  transform: translateX(100%);
+}
