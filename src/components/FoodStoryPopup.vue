@@ -270,14 +270,14 @@ export default {
   }
 
   .popup-body {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 
   .story-text,
   .cultural-text,
   .cooking-text {
     font-size: 0.95rem;
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .section-title {
@@ -285,7 +285,7 @@ export default {
   }
 
   .poetry-item {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .poetry-item-title {
@@ -307,7 +307,7 @@ export default {
   }
 
   .popup-body {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .story-text,
@@ -315,7 +315,7 @@ export default {
   .cooking-text {
     font-size: 0.9rem;
     line-height: 1.6;
-    padding: 0.8rem;
+    padding: 1.5rem;
   }
 
   .section-title {
@@ -324,7 +324,7 @@ export default {
   }
 
   .poetry-item {
-    padding: 0.8rem;
+    padding: 1.5rem;
   }
 
   .poetry-item-title {

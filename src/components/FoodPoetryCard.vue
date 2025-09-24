@@ -2,7 +2,6 @@
   <div class="card-container">
     <div class="card-header">
       <h2 class="card-title heading-font">{{ period.period }} · {{ period.year }}</h2>
-      <p class="card-location body-font">{{ period.location }}</p>
     </div>
 
     <div class="card-content">
@@ -124,30 +123,27 @@ export default {
 .card-header {
   background: linear-gradient(135deg, var(--primary-ochre) 0%, var(--secondary-ochre) 100%);
   color: var(--cream);
-  padding: 2rem;
+  padding: 0.8rem;
   text-align: center;
 }
 
 .card-title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 0;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-.card-location {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  font-style: italic;
-}
 
 .card-content {
   display: flex;
-  min-height: 600px;
+  flex-direction: column;
+  min-height: 400px;
+  height: 100%;
 }
 
 .food-section {
   flex: 1;
-  padding: 2rem;
+  padding: 0.5rem;
   background: linear-gradient(135deg, var(--beige) 0%, var(--cream) 100%);
   display: flex;
   flex-direction: column;
@@ -156,13 +152,14 @@ export default {
 
 .food-image-container {
   position: relative;
-  width: 300px;
-  height: 200px;
-  border-radius: 15px;
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
   cursor: pointer;
-  box-shadow: 0 8px 32px var(--shadow);
+  box-shadow: 0 4px 16px var(--shadow);
   transition: all 0.3s ease;
 }
 
@@ -204,25 +201,25 @@ export default {
 
 .food-info {
   text-align: center;
-  max-width: 300px;
+  width: 100%;
 }
 
 .food-name {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: var(--primary-ochre);
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   text-align: center;
 }
 
 .food-description {
   color: var(--text-dark);
-  line-height: 1.6;
-  font-size: 1rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .poetry-section {
   flex: 1;
-  padding: 2rem;
+  padding: 0.5rem;
   background: var(--cream);
   display: flex;
   flex-direction: column;
@@ -230,41 +227,41 @@ export default {
 
 .poetry-header {
   text-align: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--light-ochre);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--light-ochre);
 }
 
 .poetry-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--primary-ochre);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .poetry-dynasty {
   color: var(--text-medium);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-style: italic;
 }
 
 .poetry-content {
   flex: 1;
-  padding: 1.5rem;
+  padding: 0.8rem;
   background: var(--beige);
-  border-radius: 12px;
-  margin-bottom: 2rem;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
   text-align: center;
 }
 
 .poetry-line {
-  font-size: 1.3rem;
-  line-height: 2;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: var(--text-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   transition: all 0.3s ease;
   cursor: pointer;
-  padding: 0.3rem 0;
-  border-radius: 6px;
+  padding: 0.2rem 0;
+  border-radius: 4px;
 }
 
 .poetry-line:hover {
@@ -279,58 +276,62 @@ export default {
 
 .poetry-line.highlighted:hover {
   background: rgba(196, 77, 52, 0.1);
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .poetry-line.highlighted::after {
   content: '💡';
   position: absolute;
-  right: -30px;
+  right: -25px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .poetry-insight {
   background: linear-gradient(135deg, var(--wood-light) 0%, var(--wood-dark) 100%);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--primary-ochre);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border-left: 2px solid var(--primary-ochre);
 }
 
 .insight-title {
   color: var(--primary-ochre);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .insight-content {
   color: var(--text-dark);
-  line-height: 1.7;
-  font-size: 0.95rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 767px) {
   .card-content {
-    flex-direction: column;
     min-height: auto;
   }
 
   .food-section {
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
 
   .food-image-container {
-    width: 250px;
-    height: 160px;
+    max-width: 250px;
+    height: 150px;
   }
 
   .food-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .food-description {
+    font-size: 0.85rem;
   }
 
   .poetry-section {
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
 
   .poetry-content {
@@ -338,38 +339,50 @@ export default {
   }
 
   .poetry-line {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .card-header {
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 480px) {
   .food-image-container {
-    width: 200px;
-    height: 130px;
+    max-width: 200px;
+    height: 120px;
   }
 
   .food-name {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .food-description {
+    font-size: 0.8rem;
   }
 
   .poetry-line {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .card-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
-  .card-location {
-    font-size: 1rem;
+  .poetry-title {
+    font-size: 1.1rem;
+  }
+
+  .insight-title {
+    font-size: 0.9rem;
+  }
+
+  .insight-content {
+    font-size: 0.85rem;
   }
 }
 

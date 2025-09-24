@@ -240,12 +240,12 @@ export default {
   }
 
   .popup-body {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 
   .poetry-line {
     font-size: 1.3rem;
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .section-title {
@@ -268,12 +268,12 @@ export default {
   }
 
   .popup-body {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .poetry-line {
     font-size: 1.1rem;
-    padding: 0.8rem;
+    padding: 1.5rem;
   }
 
   .section-title {
@@ -288,7 +288,7 @@ export default {
   }
 
   .related-poem {
-    padding: 0.8rem;
+    padding: 1rem;
     font-size: 0.9rem;
   }
 }
