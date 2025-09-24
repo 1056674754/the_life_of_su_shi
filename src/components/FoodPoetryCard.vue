@@ -12,7 +12,6 @@
             :src="period.cuisine.image"
             :alt="period.cuisine.name"
             class="food-image"
-            @click="showFoodStory"
             @error="handleImageError"
           >
           <ImagePlaceholder
@@ -20,10 +19,9 @@
             :foodName="period.cuisine.name"
             :width="300"
             :height="200"
-            @click="showFoodStory"
           />
           <div class="food-overlay">
-            <p class="overlay-text poetry-font">点击查看故事</p>
+            <!-- <p class="overlay-text poetry-font">点击查看故事</p> -->
           </div>
         </div>
 
@@ -95,9 +93,9 @@ export default {
       }
     },
 
-    showFoodStory() {
-      this.$emit('show-food-story', this.period.cuisine.name)
-    },
+    // showFoodStory() {
+    //   this.$emit('show-food-story', this.period.cuisine.name)
+    // },
 
     handleImageError() {
       this.imageExists = false
@@ -112,12 +110,6 @@ export default {
   border-radius: 20px;
   box-shadow: 0 12px 48px var(--shadow);
   overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.card-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 64px rgba(139, 69, 19, 0.2);
 }
 
 .card-header {
@@ -160,19 +152,12 @@ export default {
   margin-bottom: 0.8rem;
   cursor: pointer;
   box-shadow: 0 4px 16px var(--shadow);
-  transition: all 0.3s ease;
-}
-
-.food-image-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 48px rgba(139, 69, 19, 0.25);
 }
 
 .food-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.3s ease;
 }
 
 .food-overlay {
@@ -186,11 +171,6 @@ export default {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.food-image-container:hover .food-overlay {
-  opacity: 1;
 }
 
 .overlay-text {
@@ -258,14 +238,9 @@ export default {
   line-height: 1.7;
   color: var(--text-dark);
   margin-bottom: 0.4rem;
-  transition: all 0.3s ease;
   cursor: pointer;
   padding: 0.2rem 0;
   border-radius: 4px;
-}
-
-.poetry-line:hover {
-  background: rgba(139, 69, 19, 0.1);
 }
 
 .poetry-line.highlighted {
@@ -274,10 +249,6 @@ export default {
   position: relative;
 }
 
-.poetry-line.highlighted:hover {
-  background: rgba(196, 77, 52, 0.1);
-  transform: scale(1.02);
-}
 
 .poetry-line.highlighted::after {
   content: '💡';
